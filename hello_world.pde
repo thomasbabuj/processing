@@ -8,40 +8,18 @@
   // background (0)
   
 // This example draw a rectangle and move it on the the screen  
+// Change this to OOP way
 
-
-color c = color(0);
-float x = 0;
-float y = 100;
-float speed = 1;
-
+Car myCar;
 
 void setup() {
-  size( 200, 200 );
+
+  myCar = new Car();
+  
 }
 
 void draw() {
-  background(255);
-  move ();
-  display();
- 
+  background(random(255));
+  myCar.drive();
+  myCar.display();
 }
-
-void move() {
-  
-  x = x + speed;
-  if ( x > width )  {
-    x = 0;
-  }
-  
-}
-
-void display() {
-   fill(c);
-   rect ( x, y ,30, 10 );
-}
-
-
-
-
-
