@@ -11,10 +11,13 @@
 // Change this to OOP way
 
 Car myCar;
+Car blueCar;
 
 void setup() {
-
-  myCar = new Car();
+  size ( 800, 800 );
+  noFill();
+  myCar = new Car ( color ( 255, 0, 0), 0, 100, 2 );
+  blueCar  = new Car ( color( 140, 100, 130 ), 300, 300, 5);
   
 }
 
@@ -22,4 +25,7 @@ void draw() {
   background(random(255));
   myCar.drive();
   myCar.display();
+  
+  blueCar.drive();
+  blueCar.display();
 }

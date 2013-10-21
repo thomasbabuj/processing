@@ -1,4 +1,4 @@
-
+// Car Class
 class Car {
 
     color c;
@@ -6,11 +6,11 @@ class Car {
     float ypos;
     float xspeed;
     
-    Car() {
-      c = color ( 255 );
-      xpos = width / 2;
-      ypos = height / 2;
-      xspeed = 1;
+    Car(color tempC, float tempXpos, float tempYpos, float tempXspeed) {
+      c = tempC;
+      xpos = tempXpos;
+      ypos = tempYpos;
+      xspeed = tempXspeed;
     }
     
     void display() {
