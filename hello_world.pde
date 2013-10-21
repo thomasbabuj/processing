@@ -8,7 +8,7 @@
   // background (0)
   
 // This example draw a rectangle and move it on the the screen  
-
+// Change this to OOP way
 
 color c = color(0);
 float x = 0;
