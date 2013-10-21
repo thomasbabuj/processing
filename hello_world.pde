@@ -14,7 +14,7 @@ color c = color(0);
 float x = 0;
 float y = 100;
 float speed = 1;
-float positionX, positionY = 0;
+
 
 void setup() {
   size( 200, 200 );
