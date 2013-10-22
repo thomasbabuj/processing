@@ -1,7 +1,7 @@
 // HelloWorld Images
 // Processing accepts following file formates for images: GIF, JPG< TGA, PNG
 PImage img;
-PImage img2 = createImage (200, 200, RGB );
+PImage img2 = createImage (200, 200, RGB ); // creating a blank image
 
 
 void setup(){
@@ -16,7 +16,8 @@ void draw() {
  //image ( img , 0, 0 );  // image object, startingPositionX, startingPositionY
  //image ( img2, 0, 0 );
  
- image ( img, 0, 0 );
+ image ( img, 0, 0 ); // the image, X position, Y position and optionally two arguments to resize the image
+ 
  
  img2.loadPixels();
  for ( int i=0; i< img2.pixels.length; i++) { // Changing colors with image
