@@ -4,8 +4,6 @@ color c;
 
 loadPixels();
 
-println ( pixels.length );
-
 for ( int i=0; i< pixels.length; i++ )
 {
   rand = random( 255);
