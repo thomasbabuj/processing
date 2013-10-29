@@ -1,9 +1,7 @@
-// Rotate Rect
+// Rotate Rect 
 
-void setup() {
-
-	size (500, 500);
-	rotate( radians( 45) );
-	rect ( 200, 200, 50, 50);
-
+void setup(){
+	size( 600, 600);
+	rect( 100, 100, 50,50);
 }
+
