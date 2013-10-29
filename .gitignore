@@ -4,3 +4,5 @@ application.linux
 application.macosx
 application.windows
 *.zip
+build-tmp
+build-tmp/*
