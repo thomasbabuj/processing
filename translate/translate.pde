@@ -9,10 +9,17 @@
 
 // In order to make the rect with rotate to be centered , since we already rotate the rect the with and height is not 50% anymore. 
 // So we need to calculate the width and height of the roatated rect and apply
+
+// Step 4
+// instead of calculating the width and height of the roated rect
+// now we can use the rectMode ( CENTER )
+
 void setup(){
 
 	size( 600, 600)	;
 
+	rectMode( CENTER ); // now the anchor for the rotate is the center of the stage
+	
 	pushMatrix();
 		translate(100, height/2);
 		rotate(radians(9*1));
