@@ -9,6 +9,9 @@
 	Step3
 	Changing the size of the rect to random values - now instead of square we will get rectanle shape
 	Size() can have one parameter or two ( width and height )
+
+	Step4 
+	Drawing ellipses
 */
 
 HRect d;
@@ -17,6 +20,13 @@ void setup(){
 	size(600,600);
 	H.init(this).background(#202020);	
 	smooth(); // loads the pixels smoother
+
+	
+
+	
+}
+
+void draw(){
 
 	for(int i=0; i<100; i++)
 	{
@@ -31,10 +41,5 @@ void setup(){
 		  .anchorAt(H.CENTER);
 		  H.add(d);
 	}
-
-	H.drawStage();
-}
-
-void draw(){
-		
+		H.drawStage();
 }
