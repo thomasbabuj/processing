@@ -2,6 +2,7 @@
 // Step 2  
 //      Using HRotate to rotate the rect
 //   	To see the rotation animation we need to put the H.drawStage() into void draw() method
+//		Speed ( -1 ) - rotates in anti clock wise
 
 HRect d1, d2, d3, d4, d5;
 
@@ -18,18 +19,22 @@ void setup() {
 
 	d2 = new HRect();
 	d2.size(50).rotation(45).anchorAt(H.CENTER).loc(200, height/2);
+	HRotate r2 = new HRotate().target(d2).speed(1);
 	H.add( d2 ); 	
 
 	d3 = new HRect();
 	d3.size(50).rotation(45).anchorAt(H.CENTER).loc(300, height/2);
+	HRotate r3 = new HRotate().target(d3).speed(1);
 	H.add( d3 ); 
 
 	d4 = new HRect();
 	d4.size(50).rotation(45).anchorAt(H.CENTER).loc(400, height/2);
+	HRotate r4 = new HRotate().target(d4).speed(1);
 	H.add( d4 ); 
 
 	d5 = new HRect();
 	d5.size(50).rotation(45).anchorAt(H.CENTER).loc(500, height/2);
+	HRotate r5 = new HRotate().target(d5).speed(1);
 	H.add( d5 ); 
 
 	
