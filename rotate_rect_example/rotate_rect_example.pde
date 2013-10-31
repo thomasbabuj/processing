@@ -7,13 +7,15 @@
 //      using anchor() to specify the center rectangle center 
 //  Step 4 
 //		using fill() to apply ranom colors to all the rect
+//		adding background color to the stage autoClear(true) wiping the background
+//		if autoClear(flase) then it shows the redrawing of the rectangle
 
 HRect d1, d2, d3, d4, d5;
 
 void setup() {
 
 	size(600, 600);
-	H.init(this);  // Need to initiate the Hype first
+	H.init(this).background(#666666).autoClear(false);  // Need to initiate the Hype first
 
 	// Adding the drawable to Hype
 	d1 = new HRect();
