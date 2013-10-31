@@ -2,6 +2,7 @@
 	Step 1 : Using HPath to draw polygon
 	Step 2:  Specify random values to polygon 
 	Step 3:   .star( 5,0.5) 
+	Step 4:  tringle ( H.ISOCELES, H.TOP)
 */
 
 HPath d;
