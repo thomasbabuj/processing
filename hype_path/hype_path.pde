@@ -1,6 +1,7 @@
 /*
 	Step 1 : Using HPath to draw polygon
 	Step 2:  Specify random values to polygon 
+	Step 3:   .star( 5,0.5) 
 */
 
 HPath d;
@@ -15,7 +16,8 @@ void setup(){
 
 		d = new HPath();
 		d 
-		  .polygon( (int) random(3, 9) ) // how many shapes
+		  //.polygon( (int) random(3, 9) ) // how many shapes
+		  .star( 5, 0.5)
 		  .strokeWeight(1)
 		  .stroke(#ff3300)
 		  .fill(#111111)
