@@ -5,7 +5,10 @@
 
 	Step 2
 	Changing the fill color with aplah and added rounding rect
-
+	
+	Step3
+	Changing the size of the rect to random values - now instead of square we will get rectanle shape
+	Size() can have one parameter or two ( width and height )
 */
 
 HRect d;
@@ -22,7 +25,7 @@ void setup(){
 		  .strokeWeight(1)
 		  .stroke(#ff3300)
 		  .fill(#111111, 200)
-		  .size( (int) random(25, 125))
+		  .size( (int) random(25, 75) , (int) random(25, 150))
 		  .rotate( (int) random(360))
 		  .loc( (int) random(width), (int)random(height))
 		  .anchorAt(H.CENTER);
