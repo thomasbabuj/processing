@@ -11,6 +11,8 @@
   Step 4:   Added top and bottom points and increasing the radius size
   			So, two point will intersect each other and have a different color
 
+  Step 5:  FillAndStroke() and applying alpha to the fill
+
 
 */
 
@@ -26,9 +28,10 @@ void setup() {
 		//.addPoint( width/2, height/2, #FF3300, 0.3) // Xposition, Yposition, color, radius
 		.addPoint( 0, height/2, #FF3300, 0.5) // Left side
 		.addPoint( width, height/2, #0095a8, 0.5) // right side
-		//.addPoint( width/2, 0, #ff8822,0.3)  // top side
-		//.addPoint( width/2, height, #CCEEDD, 0.3 ) // bottom side
-		.fillOnly() //applying this to fillonly
+		.addPoint( width/2, 0, #ffff00,0.3)  // top side
+		.addPoint( width/2, height, #00ff00, 0.3 ) // bottom side
+		//.fillOnly() //applying this to fillonly
+		.fillAndStroke()
 		
 	;
 
@@ -40,8 +43,10 @@ void setup() {
 		d
 			//.strokeWeight(1)
 			//.stroke(#ff3300)  -- Removing strokes
-			.noStroke()
-			.fill(#000000)
+			//.noStroke()
+			.strokeWeight(1)
+			.stroke(#000000)
+			.fill(#000000, 100) //applying alpha
 			.size( (int)random(25,125) )
 			.rotate( (int)random(360) )
 			.loc( (int)random(width), (int)random(height) )
