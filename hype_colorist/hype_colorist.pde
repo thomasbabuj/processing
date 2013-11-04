@@ -6,6 +6,7 @@
 	Step 3:  Reduce the square size and add HPixelColor to get the colors from the image
 	Step 4:  Removing the image from the background
 	Step 5:  Change HPixelColorist Properites from fillOnly to strokeOnly
+	Step 6:  Applying fill and stroke properties
 */
 
 HRect d;
@@ -21,7 +22,9 @@ void setup(){
 
 	// Takes colors from the an image and apply those colors to our squares
 	//colors = new HPixelColorist("kelp.jpg").fillOnly();
-	colors = new HPixelColorist("kelp.jpg").strokeOnly();
+	//colors = new HPixelColorist("kelp.jpg").strokeOnly();
+	colors = new HPixelColorist("kelp.jpg").fillAndStroke();
+
 
 	for(int i=0; i<100; i++) {
 		d = new HRect();
@@ -29,7 +32,11 @@ void setup(){
 			.strokeWeight(1)
 			//.stroke(#000000)
 			//.fill(#111111)  // removing this because in pixelcolorst we are applying fillOnly
-			.fill(#111111) // added back because we are applying colorst to strokeOnly 
+			//.fill(#111111) // added back because we are applying colorst to strokeOnly 
+			// The above code was removed, because we are applying fillAndStroke
+			// Inorder to see the fill and stroke clearly we are applying alpha(100)
+
+			.alpha(100)
 			.size( (int)random(25, 75))
 			.rotate( (int)random(360) )
 			.loc( (int)random(width), (int)random(height))
