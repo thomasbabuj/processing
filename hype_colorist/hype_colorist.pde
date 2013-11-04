@@ -30,9 +30,8 @@ void setup(){
 
 	for(int i=0; i<100; i++) {
 		d = new HRect();
-
+		println( d.x() );
 		d
-			.loc( (int)random(width), (int)random(height))
 			.strokeWeight(1)
 			//.stroke(#000000)
 			//.fill(#111111)  // removing this because in pixelcolorst we are applying fillOnly
@@ -47,7 +46,7 @@ void setup(){
 
 			.size( (int)random(25, 125))
 			.rotate( (int)random(360) )
-			
+			.loc( (int)random(width), (int)random(height))
 			.anchorAt(H.CENTER)
 		;
 
