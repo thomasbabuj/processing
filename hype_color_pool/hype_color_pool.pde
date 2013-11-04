@@ -1,22 +1,27 @@
 /*
   Hype Color Pool
-  Step 1:  Createing bunch of squares using HRect
+  Step 1:  Creating bunch of squares using HRect
+  Step 2:  Adding the HColorPool 
+  		   getColor() randomly picks colors from the HColorPool object
 */
 
 HRect d;
+HColorPool colors;
 
 void setup(){
 	size(600, 600);
 	H.init(this).background(#202020);
 	smooth();
 
+	colors = new HColorPool(#FFFFFF, #F7F7F7, #ECECEC, #333333, #0095a8, #00616F, #ff3300, #ff6600);
+
 	for(int i=0; i<100; i++)
 	{
 		d = new HRect();
 		d
 			.strokeWeight(1)
-			.stroke(#ff3300)
-			.fill(111111)
+			.stroke(#000000)
+			.fill( colors.getColor() )
 			.size( (int)random(25,155))
 			.rotate((int) random(360))
 			.loc((int) random(width), (int) random(height))
