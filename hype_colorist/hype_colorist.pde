@@ -3,9 +3,11 @@
 	Using a photograph to get the colors 	
 	Step 1:  Adding HRect based squares 
 	Step 2:  Adding image on the background
+	Step 3:  Reduce the square size
 */
 
 HRect d;
+HPixelColorist colors;
 
 
 void setup(){
@@ -15,17 +17,22 @@ void setup(){
 
 	H.add( new HImage("kelp.jpg"));
 
+	// Takes colors from the an image and apply those colors to our squares
+	colors = new HPixelColorist("kelp.jpg").fillOnly();
+
 	for(int i=0; i<100; i++) {
 		d = new HRect();
 		d
 			.strokeWeight(1)
-			.stroke(#ff3300)
-			.fill(#111111)
-			.size( (int)random(25,125))
+			.stroke(#000000)
+			//.fill(#111111)  // removing this because in pixelcolorst we are applying fillOnly
+			.size( (int)random(25, 75))
 			.rotate( (int)random(360) )
 			.loc( (int)random(width), (int)random(height))
 			.anchorAt(H.CENTER)
 		;
+
+		colors.applyColor(d); // applying colors to the square
 		
 		H.add(d);	
 	}
