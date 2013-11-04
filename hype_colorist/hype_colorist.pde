@@ -3,7 +3,9 @@
 	Using a photograph to get the colors 	
 	Step 1:  Adding HRect based squares 
 	Step 2:  Adding image on the background
-	Step 3:  Reduce the square size
+	Step 3:  Reduce the square size and add HPixelColor to get the colors from the image
+	Step 4:  Removing the image from the background
+	Step 5:  Change HPixelColorist Properites from fillOnly to strokeOnly
 */
 
 HRect d;
@@ -15,7 +17,7 @@ void setup(){
 	H.init(this).background(#202020);
 	smooth();
 
-	H.add( new HImage("kelp.jpg"));
+	//H.add( new HImage("kelp.jpg"));
 
 	// Takes colors from the an image and apply those colors to our squares
 	colors = new HPixelColorist("kelp.jpg").fillOnly();
