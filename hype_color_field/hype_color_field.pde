@@ -8,6 +8,10 @@
              Left will have 0 x-axis
             This will draw two points ( left and right side of the stage )
 
+  Step 4:   Added top and bottom points and increasing the radius size
+  			So, two point will intersect each other and have a different color
+
+
 */
 
 HRect d;
@@ -20,8 +24,10 @@ void setup() {
 
 	colors = new HColorField(width,height)
 		//.addPoint( width/2, height/2, #FF3300, 0.3) // Xposition, Yposition, color, radius
-		.addPoint( 0, height/2, #FF3300, 0.3)
-		.addPoint( width, height/2, #0095a8, 0.3)
+		.addPoint( 0, height/2, #FF3300, 0.5) // Left side
+		.addPoint( width, height/2, #0095a8, 0.5) // right side
+		//.addPoint( width/2, 0, #ff8822,0.3)  // top side
+		//.addPoint( width/2, height, #CCEEDD, 0.3 ) // bottom side
 		.fillOnly() //applying this to fillonly
 		
 	;
