@@ -1,5 +1,8 @@
 /*
   Hype Color Field -   Specifying the fields of colors and it will transition out to specified fill color
+
+  Maps colors in the stage
+
   Step 1:  Adding Random squares on the stage
   		 
   Step 2:	Applying the HColorField to the center of the stage
