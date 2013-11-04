@@ -20,14 +20,16 @@ void setup(){
 	//H.add( new HImage("kelp.jpg"));
 
 	// Takes colors from the an image and apply those colors to our squares
-	colors = new HPixelColorist("kelp.jpg").fillOnly();
+	//colors = new HPixelColorist("kelp.jpg").fillOnly();
+	colors = new HPixelColorist("kelp.jpg").strokeOnly();
 
 	for(int i=0; i<100; i++) {
 		d = new HRect();
 		d
 			.strokeWeight(1)
-			.stroke(#000000)
+			//.stroke(#000000)
 			//.fill(#111111)  // removing this because in pixelcolorst we are applying fillOnly
+			.fill(#111111) // added back because we are applying colorst to strokeOnly 
 			.size( (int)random(25, 75))
 			.rotate( (int)random(360) )
 			.loc( (int)random(width), (int)random(height))
