@@ -4,6 +4,10 @@
   		 
   Step 2:	Applying the HColorField to the center of the stage
 
+  Step 3:   Adding two points of color ( left and right)
+             Left will have 0 x-axis
+            This will draw two points ( left and right side of the stage )
+
 */
 
 HRect d;
@@ -15,7 +19,9 @@ void setup() {
 	smooth();
 
 	colors = new HColorField(width,height)
-		.addPoint( width/2, height/2, #FF3300, 0.3) // Xposition, Yposition, color, radius
+		//.addPoint( width/2, height/2, #FF3300, 0.3) // Xposition, Yposition, color, radius
+		.addPoint( 0, height/2, #FF3300, 0.3)
+		.addPoint( width, height/2, #0095a8, 0.3)
 		.fillOnly() //applying this to fillonly
 		
 	;
